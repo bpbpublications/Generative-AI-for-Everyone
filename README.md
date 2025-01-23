@@ -1,2 +1,4 @@
-# Generative AI for everyone
- Generative AI for everyone
+# Generative AI for Everyone
+ Generative AI for Everyone
+
+
