@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "pmy_cv", "label": "Article:pmy_cv", "properties": {"DOI": "10.7759/cureus.45091", "abstract": "Discusses the relationship between stroke and cancer, including screening, treatment, and management strategies.", "article_type": "Review", "conclusion": "Anticoagulants may be beneficial for cancer-related strokes.", "id": "pmy_cv", "pub_date": "2023", "title": "Cryptogenic stroke and embolic stroke of undetermined source (ESUS)"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_strokeetiologyclass", "label": "Reference:_strokeetiologyclass", "properties": {"id": "_strokeetiologyclass", "name": "Stroke: Etiology, classification, and epidemiology"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_cryptogenicstrokean", "label": "Reference:_cryptogenicstrokean", "properties": {"id": "_cryptogenicstrokean", "name": "Cryptogenic stroke and embolic stroke of undetermined source (ESUS) "}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_strokeandcanceracom", "label": "Reference:_strokeandcanceracom", "properties": {"id": "_strokeandcanceracom", "name": "Stroke and cancer- a complicated relationship"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_arterialthrombosisi", "label": "Reference:_arterialthrombosisi", "properties": {"id": "_arterialthrombosisi", "name": "Arterial thrombosis in patients with cancer"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_selvikhabjerkreimat", "label": "Reference:_selvikhabjerkreimat", "properties": {"id": "_selvikhabjerkreimat", "name": "Selvik HA, Bjerkreim AT, Thomassen L, Waje-Andreassen U"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_deipthanprabakar", "label": "Authors:_deipthanprabakar", "properties": {"author_affliation": "None", "corresponding_author": "yes", "id": "_deipthanprabakar", "name": "Deipthan Prabakar"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_vaishnavisabesan", "label": "Authors:_vaishnavisabesan", "properties": {"author_affliation": "None", "corresponding_author": "yes", "id": "_vaishnavisabesan", "name": "Vaishnavi Sabesan"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_oluwasegunpemenogu", "label": "Authors:_oluwasegunpemenogu", "properties": {"author_affliation": "None", "corresponding_author": "yes", "id": "_oluwasegunpemenogu", "name": "Oluwasegun P. Emenogu"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_cucmai", "label": "Authors:_cucmai", "properties": {"author_affliation": "None", "corresponding_author": "yes", "id": "_cucmai", "name": "Cuc Mai"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "jmy_cv_1", "label": "Category:jmy_cv_1", "properties": {"id": "jmy_cv_1", "name": "Internal Medicine"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "jmy_cv_2", "label": "Category:jmy_cv_2", "properties": {"id": "jmy_cv_2", "name": "Neurology"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_1", "label": "Keyword:emy_cv_1", "properties": {"id": "emy_cv_1", "name": "stroke"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_2", "label": "Keyword:emy_cv_2", "properties": {"id": "emy_cv_2", "name": "cancer"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_3", "label": "Keyword:emy_cv_3", "properties": {"id": "emy_cv_3", "name": "thrombosis"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_4", "label": "Keyword:emy_cv_4", "properties": {"id": "emy_cv_4", "name": "anticoagulation"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_5", "label": "Keyword:emy_cv_5", "properties": {"id": "emy_cv_5", "name": "embolic stroke"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "emy_cv_6", "label": "Keyword:emy_cv_6", "properties": {"id": "emy_cv_6", "name": "occult cancer"}, "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "_when", "label": "Reference:_when", "properties": {"id": "_when", "name": "When"}, "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "pmy_cv", "relationship": "REFERED", "to": "_strokeetiologyclass", "width": 1}, {"from": "pmy_cv", "relationship": "REFERED", "to": "_cryptogenicstrokean", "width": 1}, {"from": "pmy_cv", "relationship": "REFERED", "to": "_strokeandcanceracom", "width": 1}, {"from": "pmy_cv", "relationship": "REFERED", "to": "_arterialthrombosisi", "width": 1}, {"from": "pmy_cv", "relationship": "REFERED", "to": "_selvikhabjerkreimat", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_AUTHOR", "to": "_deipthanprabakar", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_AUTHOR", "to": "_vaishnavisabesan", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_AUTHOR", "to": "_oluwasegunpemenogu", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_AUTHOR", "to": "_cucmai", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_CATEGORY", "to": "jmy_cv_1", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_CATEGORY", "to": "jmy_cv_2", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_1", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_2", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_3", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_4", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_5", "width": 1}, {"from": "pmy_cv", "relationship": "HAS_KEYWORD", "to": "emy_cv_6", "width": 1}, {"from": "pmy_cv", "relationship": "REFERED", "to": "_when", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

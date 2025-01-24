@@ -1,0 +1,22 @@
+Collecting transformers[sentencepiece]
+  Using cached transformers-4.36.2-py3-none-any.whl.metadata (126 kB)
+Requirement already satisfied: filelock in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (3.9.0)
+Collecting huggingface-hub<1.0,>=0.19.3 (from transformers[sentencepiece])
+  Using cached huggingface_hub-0.20.2-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: numpy>=1.17 in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (1.26.3)
+Requirement already satisfied: packaging>=20.0 in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (23.2)
+Requirement already satisfied: pyyaml>=5.1 in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (6.0.1)
+Collecting regex!=2019.12.17 (from transformers[sentencepiece])
+  Using cached regex-2023.12.25-cp312-cp312-win_amd64.whl.metadata (41 kB)
+Requirement already satisfied: requests in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (2.31.0)
+Collecting tokenizers<0.19,>=0.14 (from transformers[sentencepiece])
+  Using cached tokenizers-0.15.0-cp312-none-win_amd64.whl
+Collecting safetensors>=0.3.1 (from transformers[sentencepiece])
+  Using cached safetensors-0.4.1-cp312-none-win_amd64.whl
+Requirement already satisfied: tqdm>=4.27 in c:\users\vaishnavi\huggingface-repo\graphgeneration-medicalresearch\.venv\lib\site-packages (from transformers[sentencepiece]) (4.66.1)
+Collecting sentencepiece!=0.1.92,>=0.1.91 (from transformers[sentencepiece])
+  Using cached sentencepiece-0.1.99.tar.gz (2.6 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
