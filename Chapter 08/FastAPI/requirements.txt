@@ -1,0 +1,5 @@
+transformers
+fastapi
+pydantic
+uvicorn
+TensorFlow
