@@ -1,0 +1,23 @@
+langchain
+langchain_openai
+streamlit
+streamlit_feedback
+st-pop-up-component
+streamlit-ace
+openai
+python-dotenv
+google.cloud
+google-cloud-aiplatform
+path
+flair
+language_tool_python
+dvc
+# install git and dvc
+# git init
+# dvc init
+# set remote origin for git
+# git push set origin master
+# git commit -m "commiting first version"
+# dvc add new
+# git add -all
+# git commit - m "dvc files"

@@ -1,0 +1,13 @@
+prompt = '''    What is generative ai  '''
+latency = ''' 5.01304030418396 '''
+cost = ''' 0.0002325 '''
+bias = ''' 0 '''
+grammar = ''' 0 '''
+comp_rel_res = '''  Logical Consistency: 5
+Topic Relevance: 5 '''
+feedback_score = ''' 0.75 '''
+response = ''' Generative AI refers to a type of artificial intelligence that is capable of creating new content, such as images, text, or music, that is original and not directly copied from existing examples. Generative AI models are trained on large datasets and can then generate new content based on the patterns and styles they have learned. This technology has applications in creative fields such as art, design, and music composition, as well as in areas like natural language processing and data generation. However, it also raises ethical and legal concerns related to copyright, authenticity, and misuse. '''
+temperature = ''' 0.1 '''
+modelname = ''' gpt-3.5-turbo-1106 '''
+sessionid = ''' b78ffdf9-a7e7-4837-a093-e028e907a5e6 '''
+time = ''' 1705314604.475788 '''

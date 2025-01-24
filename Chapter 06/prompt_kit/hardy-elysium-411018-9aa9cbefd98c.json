@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hardy-elysium-411018",
+  "private_key_id": "9aa9cbefd98c61c1c7dc9aecff3e38af114ac609",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYURnFfYEd8wIT\nRORbYpojbMnN5N3VJ46ZryLcD3gWTJFuIDRGVCd0qRROmbkVsuRQ1itinP2F7PwK\n6eo+tQumxdYZsaepuVnK7ZFnspQe0Fl6r6ZiN83J9v/8tRwmrtm14s3hTmfEupaD\nI4iPlo0frlYBfNn/PbiAAzjEpd07O/mbFD12CtBlqAwiaPRv00hKywZTYE/HowGC\nJONlReY3mwuzhAkBXcNMfhLv7sMQHAHwOCjZcE1usi8t5Sc0Q+nrK35793Lbz1jh\nM9Wq+RmXSsGbM9sHHQB4VbwbyE9xXU8lviVcXfwcTmyM6KSkezCLLRi1uoFj2vte\nnVAEsXXpAgMBAAECggEALHwlLiF8u5F9dEP/KDHzW+Sj7aUq34p2f3FuXE4MFp3h\nbIHP7kShJpMc23sufmFfJaadnnaFhpSxUnc/Vmz5++6EdJ09yyAUcLCBbg9h+aJE\nPIBB2cH7HpUemLQQGX5sxERjrXlnyqPKjyZwD4NY+1JpWn34AM8LEbxX4MzxXZw7\nd0/FLMvOypQGhoLDV269B27UWEtwaHaQ8OrETNF+IHZztk7lxVwCK0kZq3NAP+fT\n+7FX/xPShb/lWm6DvEnsZYOT4UchN0eNBZDJf5iYc0yv8RFllZOTUXaTMT8SbpeL\n1ePQapOPVTLdWua1sTZlRBoTIMX/i9LPWOZbOiOLTwKBgQD2w4vgugV2M5ssucrF\n/tSRT9q9ZzlZ6lapn8104SCjYlNfVFbQzzvT1VnMNdisxftk9y4u/y+z0e7MieoI\nD49xINWZI0ovjCNK1ywwpbc9erDZfinHWuwUEBq+TvmBOGCPi8kae1zytBAHP1vf\nWv2wPebCWlDy0hPXSDsJIVaQpwKBgQDgadC0GVUSMtUhiam+EMRHTr7ddUJsOzVG\nsb/U3fmcyuEBC3v4Ptz3JKSYZLAewhiPwvvK/B0bUNVyfq2SrCIzQwJDu8CoFFPs\nb3vXzgwwi3hd+s38BlsEfdks95G3KPc7XK/svI3Hc/WsfV4bzK814/ZMk+ZiLEON\nb+bUFa+G7wKBgGx1VFSozl++nPSSkKpnr/xScd0PsqhvlDmn0EEP9i15uRVMV4Ad\npbkcrARSonKF7lHZRsZHSSsrGV9zOpbiZ/ScLuXJGgE+AgESBA05uQlflL1zc194\n+gxza527znRaWC6fjPuDvz25oNXepj3Mm3ZMLtG7qpqfdTMJP1FrAsY/AoGAVf01\n00zBpC+GK0uslv+ltg0eZY1A3mfxih0h/FbyBnpWrSfRYNX1pV2NFDfApIiLEMsN\n4EGqhYT7xNt1dvYuRKYwf/O5Zq4jWj19nrt9QDyw6pHny+JDjf0K8ogKdbxkv4JM\nhtHZIcv1HxsKrGxJ1sR64+zoIkYDvHZcZHfKwlECgYEA6nfOEzYkeO3lBjRT3mN/\njqRVM6cELmcExQwyIoHQRRhFA8gzdbmp0xWOOm8yULcUJ1dZ/28QPrnddi0D1r7u\nXFAZC0GWTqATegqMENIsFeR6N0LstTAlTSJz/P1spjvyHKJ5WsoDVPeDG2b9aNr8\ntp1O3OkqnHPTe8IOqFTVRBs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vertex-ai@hardy-elysium-411018.iam.gserviceaccount.com",
+  "client_id": "113821933098635281884",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vertex-ai%40hardy-elysium-411018.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

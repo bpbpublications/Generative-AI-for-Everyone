@@ -1,0 +1,6 @@
+outs:
+- md5: ce762b3757b54a2eedff837b1367632c.dir
+  size: 321
+  nfiles: 2
+  hash: md5
+  path: new
